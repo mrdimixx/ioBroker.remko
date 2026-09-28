@@ -7,6 +7,8 @@
 ![Number of Installations](https://iobroker.live/badges/remko-installed.svg)
 ![Current version in stable repository](https://iobroker.live/badges/remko-stable.svg)
 
+[![Donate](https://img.shields.io/badge/paypal-donate%20%7C%20spenden-blue.svg)](https://paypal.me/dieterstoppel)
+
 **Tests:** ![Test and Release](https://github.com/mrdimixx/ioBroker.remko/workflows/Test%20and%20Release/badge.svg)
 
 ## REMKO heat pump adapter for ioBroker
@@ -95,6 +97,12 @@ node tools/probe.js <ip-of-heat-pump>                  # read only
 node tools/probe.js <ip-of-heat-pump> --write 1082=46  # write one value
 ```
 
+## Donate
+
+If you like this adapter and want to support its development, you can buy me a coffee:
+
+[![Donate](https://img.shields.io/badge/paypal-donate%20%7C%20spenden-blue.svg)](https://paypal.me/dieterstoppel)
+
 ## Credits
 
 Protocol knowledge partly based on [Altrec/remko_mqtt-ha](https://github.com/Altrec/remko_mqtt-ha), [fuchsi585/remko_http](https://github.com/fuchsi585/remko_http) and [Christoph-87/remko-smartweb-ha](https://github.com/Christoph-87/remko-smartweb-ha).
@@ -104,6 +112,9 @@ Protocol knowledge partly based on [Altrec/remko_mqtt-ha](https://github.com/Alt
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### 0.3.2 (2026-09-28)
+- (mrdimixx) PayPal donation link added (README, GitHub sponsor button, npm funding)
+
 ### 0.3.1 (2026-09-28)
 - (mrdimixx) release via GitHub Actions (npm trusted publishing with provenance)
 

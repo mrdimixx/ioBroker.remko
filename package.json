@@ -1,6 +1,6 @@
 {
   "name": "iobroker.remko",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Read and control REMKO heat pumps (Smart-Web / Smart-Control) via local MQTT",
   "author": {
     "name": "mrdimixx",
@@ -66,6 +66,10 @@
   },
   "bugs": {
     "url": "https://github.com/mrdimixx/ioBroker.remko/issues"
+  },
+  "funding": {
+    "type": "paypal",
+    "url": "https://paypal.me/dieterstoppel"
   },
   "readmeFilename": "README.md"
 }

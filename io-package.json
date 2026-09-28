@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "remko",
-        "version": "0.3.1",
+        "version": "0.3.2",
         "news": {
+            "0.3.2": {
+                "en": "PayPal donation link added",
+                "de": "PayPal-Spendenlink hinzugefügt",
+                "ru": "Добавлена ссылка для пожертвований через PayPal",
+                "pt": "Link de doação PayPal adicionado",
+                "nl": "PayPal-donatielink toegevoegd",
+                "fr": "Lien de don PayPal ajouté",
+                "it": "Aggiunto link per donazioni PayPal",
+                "es": "Enlace de donación de PayPal añadido",
+                "pl": "Dodano link do darowizn PayPal",
+                "uk": "Додано посилання для пожертв через PayPal",
+                "zh-cn": "已添加 PayPal 捐赠链接"
+            },
             "0.3.1": {
                 "en": "Release via GitHub Actions with npm provenance",
                 "de": "Veröffentlichung über GitHub Actions mit npm-Provenance",
