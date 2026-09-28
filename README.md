@@ -104,6 +104,9 @@ Protocol knowledge partly based on [Altrec/remko_mqtt-ha](https://github.com/Alt
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### 0.3.1 (2026-09-28)
+- (mrdimixx) release via GitHub Actions (npm trusted publishing with provenance)
+
 ### 0.3.0 (2026-09-28)
 - (mrdimixx) prepared for the ioBroker repository: English README, translations, tests, GitHub Actions, npm deployment
 - (mrdimixx) log messages in English

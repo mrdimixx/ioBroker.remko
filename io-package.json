@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "remko",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "news": {
+            "0.3.1": {
+                "en": "Release via GitHub Actions with npm provenance",
+                "de": "Veröffentlichung über GitHub Actions mit npm-Provenance",
+                "ru": "Публикация через GitHub Actions с npm provenance",
+                "pt": "Publicação via GitHub Actions com npm provenance",
+                "nl": "Publicatie via GitHub Actions met npm-provenance",
+                "fr": "Publication via GitHub Actions avec provenance npm",
+                "it": "Pubblicazione tramite GitHub Actions con provenance npm",
+                "es": "Publicación mediante GitHub Actions con provenance de npm",
+                "pl": "Publikacja przez GitHub Actions z npm provenance",
+                "uk": "Публікація через GitHub Actions з npm provenance",
+                "zh-cn": "通过 GitHub Actions 发布并带有 npm 来源证明"
+            },
             "0.3.0": {
                 "en": "Prepared for the ioBroker repository: tests, translations, GitHub Actions",
                 "de": "Für das ioBroker-Repository vorbereitet: Tests, Übersetzungen, GitHub Actions",
@@ -15,45 +28,6 @@
                 "pl": "Przygotowano do repozytorium ioBroker: testy, tłumaczenia, GitHub Actions",
                 "uk": "Підготовлено для репозиторію ioBroker: тести, переклади, GitHub Actions",
                 "zh-cn": "为 ioBroker 仓库做准备：测试、翻译、GitHub Actions"
-            },
-            "0.2.1": {
-                "en": "Actions (e.g. 1x DHW heating) as buttons, role fixes",
-                "de": "Aktionen (z. B. 1x WW aufheizen) als Button, Rollen korrigiert",
-                "ru": "Действия (напр. 1x нагрев ГВС) как кнопки, исправлены роли",
-                "pt": "Ações (ex. 1x aquecimento AQS) como botões, correção de funções",
-                "nl": "Acties (bv. 1x warmwater opwarmen) als knop, rollen gecorrigeerd",
-                "fr": "Actions (ex. 1x chauffage ECS) en boutons, rôles corrigés",
-                "it": "Azioni (es. 1x riscaldamento ACS) come pulsanti, ruoli corretti",
-                "es": "Acciones (p. ej. 1x calentar ACS) como botones, roles corregidos",
-                "pl": "Akcje (np. 1x podgrzanie CWU) jako przyciski, poprawione role",
-                "uk": "Дії (напр. 1x нагрів ГВП) як кнопки, виправлено ролі",
-                "zh-cn": "操作（如一次性加热生活热水）作为按钮，修正角色"
-            },
-            "0.2.0": {
-                "en": "Only data points shown by the web UI, structured by menu",
-                "de": "Nur Datenpunkte, die auch die Weboberfläche zeigt, nach Menü gegliedert",
-                "ru": "Только точки данных веб-интерфейса, по структуре меню",
-                "pt": "Apenas pontos de dados mostrados pela interface web, organizados por menu",
-                "nl": "Alleen datapunten die de webinterface toont, per menu gestructureerd",
-                "fr": "Uniquement les points affichés par l'interface web, structurés par menu",
-                "it": "Solo i punti dati mostrati dall'interfaccia web, strutturati per menu",
-                "es": "Solo los puntos de datos que muestra la interfaz web, por menú",
-                "pl": "Tylko punkty danych widoczne w interfejsie WWW, wg menu",
-                "uk": "Лише точки даних вебінтерфейсу, за структурою меню",
-                "zh-cn": "仅显示网页界面中的数据点，按菜单组织"
-            },
-            "0.1.0": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "uk": "Початкова версія",
-                "zh-cn": "首次出版"
             }
         },
         "titleLang": {
