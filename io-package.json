@@ -1,0 +1,218 @@
+{
+    "common": {
+        "name": "remko",
+        "version": "0.3.0",
+        "news": {
+            "0.3.0": {
+                "en": "Prepared for the ioBroker repository: tests, translations, GitHub Actions",
+                "de": "Für das ioBroker-Repository vorbereitet: Tests, Übersetzungen, GitHub Actions",
+                "ru": "Подготовлено для репозитория ioBroker: тесты, переводы, GitHub Actions",
+                "pt": "Preparado para o repositório ioBroker: testes, traduções, GitHub Actions",
+                "nl": "Voorbereid voor de ioBroker-repository: tests, vertalingen, GitHub Actions",
+                "fr": "Préparé pour le dépôt ioBroker : tests, traductions, GitHub Actions",
+                "it": "Preparato per il repository ioBroker: test, traduzioni, GitHub Actions",
+                "es": "Preparado para el repositorio de ioBroker: pruebas, traducciones, GitHub Actions",
+                "pl": "Przygotowano do repozytorium ioBroker: testy, tłumaczenia, GitHub Actions",
+                "uk": "Підготовлено для репозиторію ioBroker: тести, переклади, GitHub Actions",
+                "zh-cn": "为 ioBroker 仓库做准备：测试、翻译、GitHub Actions"
+            },
+            "0.2.1": {
+                "en": "Actions (e.g. 1x DHW heating) as buttons, role fixes",
+                "de": "Aktionen (z. B. 1x WW aufheizen) als Button, Rollen korrigiert",
+                "ru": "Действия (напр. 1x нагрев ГВС) как кнопки, исправлены роли",
+                "pt": "Ações (ex. 1x aquecimento AQS) como botões, correção de funções",
+                "nl": "Acties (bv. 1x warmwater opwarmen) als knop, rollen gecorrigeerd",
+                "fr": "Actions (ex. 1x chauffage ECS) en boutons, rôles corrigés",
+                "it": "Azioni (es. 1x riscaldamento ACS) come pulsanti, ruoli corretti",
+                "es": "Acciones (p. ej. 1x calentar ACS) como botones, roles corregidos",
+                "pl": "Akcje (np. 1x podgrzanie CWU) jako przyciski, poprawione role",
+                "uk": "Дії (напр. 1x нагрів ГВП) як кнопки, виправлено ролі",
+                "zh-cn": "操作（如一次性加热生活热水）作为按钮，修正角色"
+            },
+            "0.2.0": {
+                "en": "Only data points shown by the web UI, structured by menu",
+                "de": "Nur Datenpunkte, die auch die Weboberfläche zeigt, nach Menü gegliedert",
+                "ru": "Только точки данных веб-интерфейса, по структуре меню",
+                "pt": "Apenas pontos de dados mostrados pela interface web, organizados por menu",
+                "nl": "Alleen datapunten die de webinterface toont, per menu gestructureerd",
+                "fr": "Uniquement les points affichés par l'interface web, structurés par menu",
+                "it": "Solo i punti dati mostrati dall'interfaccia web, strutturati per menu",
+                "es": "Solo los puntos de datos que muestra la interfaz web, por menú",
+                "pl": "Tylko punkty danych widoczne w interfejsie WWW, wg menu",
+                "uk": "Лише точки даних вебінтерфейсу, за структурою меню",
+                "zh-cn": "仅显示网页界面中的数据点，按菜单组织"
+            },
+            "0.1.0": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "titleLang": {
+            "en": "REMKO heat pump",
+            "de": "REMKO Wärmepumpe",
+            "ru": "Тепловой насос REMKO",
+            "pt": "Bomba de calor REMKO",
+            "nl": "REMKO-warmtepomp",
+            "fr": "Pompe à chaleur REMKO",
+            "it": "Pompa di calore REMKO",
+            "es": "Bomba de calor REMKO",
+            "pl": "Pompa ciepła REMKO",
+            "uk": "Тепловий насос REMKO",
+            "zh-cn": "REMKO 热泵"
+        },
+        "desc": {
+            "en": "Read and control REMKO heat pumps (Smart-Web / Smart-Control) via local MQTT",
+            "de": "REMKO Wärmepumpen (Smart-Web / Smart-Control) lokal per MQTT auslesen und steuern",
+            "ru": "Чтение и управление тепловыми насосами REMKO (Smart-Web / Smart-Control) по локальному MQTT",
+            "pt": "Ler e controlar bombas de calor REMKO (Smart-Web / Smart-Control) via MQTT local",
+            "nl": "REMKO-warmtepompen (Smart-Web / Smart-Control) lokaal via MQTT uitlezen en besturen",
+            "fr": "Lire et piloter les pompes à chaleur REMKO (Smart-Web / Smart-Control) via MQTT local",
+            "it": "Leggere e controllare le pompe di calore REMKO (Smart-Web / Smart-Control) tramite MQTT locale",
+            "es": "Leer y controlar bombas de calor REMKO (Smart-Web / Smart-Control) mediante MQTT local",
+            "pl": "Odczyt i sterowanie pompami ciepła REMKO (Smart-Web / Smart-Control) przez lokalny MQTT",
+            "uk": "Читання та керування тепловими насосами REMKO (Smart-Web / Smart-Control) через локальний MQTT",
+            "zh-cn": "通过本地 MQTT 读取和控制 REMKO 热泵（Smart-Web / Smart-Control）"
+        },
+        "authors": [
+            "mrdimixx <stoppeld@gmx.de>"
+        ],
+        "keywords": [
+            "remko",
+            "heatpump",
+            "waermepumpe",
+            "smart-web",
+            "mqtt"
+        ],
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "platform": "Javascript/Node.js",
+        "icon": "remko.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/mrdimixx/ioBroker.remko/main/admin/remko.png",
+        "readme": "https://github.com/mrdimixx/ioBroker.remko/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 2,
+        "mode": "daemon",
+        "type": "climate-control",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "push",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=6.0.11"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=7.6.20"
+            }
+        ]
+    },
+    "native": {
+        "host": "",
+        "transport": "ws",
+        "port": 9001,
+        "password": "",
+        "topicPrefix": "",
+        "keepAlive": 30,
+        "fullRefresh": 15,
+        "fastRegisters": "",
+        "writeMode": "user",
+        "menuLevel": "user",
+        "showAll": false,
+        "includeMessages": false
+    },
+    "encryptedNative": [
+        "password"
+    ],
+    "protectedNative": [
+        "password"
+    ],
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": {
+                    "en": "Information",
+                    "de": "Information",
+                    "ru": "Информация",
+                    "pt": "Informação",
+                    "nl": "Informatie",
+                    "fr": "Information",
+                    "it": "Informazioni",
+                    "es": "Información",
+                    "pl": "Informacja",
+                    "uk": "Інформація",
+                    "zh-cn": "信息"
+                }
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": {
+                    "en": "Connected to heat pump",
+                    "de": "Verbunden mit Wärmepumpe",
+                    "ru": "Подключено к тепловому насосу",
+                    "pt": "Ligado à bomba de calor",
+                    "nl": "Verbonden met warmtepomp",
+                    "fr": "Connecté à la pompe à chaleur",
+                    "it": "Connesso alla pompa di calore",
+                    "es": "Conectado a la bomba de calor",
+                    "pl": "Połączono z pompą ciepła",
+                    "uk": "Підключено до теплового насоса",
+                    "zh-cn": "已连接热泵"
+                },
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.firmware",
+            "type": "state",
+            "common": {
+                "role": "info.firmware",
+                "name": {
+                    "en": "Smart-Web firmware",
+                    "de": "Smart-Web Firmware",
+                    "ru": "Прошивка Smart-Web",
+                    "pt": "Firmware Smart-Web",
+                    "nl": "Smart-Web-firmware",
+                    "fr": "Firmware Smart-Web",
+                    "it": "Firmware Smart-Web",
+                    "es": "Firmware Smart-Web",
+                    "pl": "Oprogramowanie Smart-Web",
+                    "uk": "Прошивка Smart-Web",
+                    "zh-cn": "Smart-Web 固件"
+                },
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        }
+    ]
+}

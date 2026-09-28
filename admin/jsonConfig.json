@@ -1,0 +1,179 @@
+{
+    "i18n": true,
+    "type": "panel",
+    "items": {
+        "_h1": {
+            "type": "header",
+            "text": "Connection",
+            "size": 3,
+            "newLine": true
+        },
+        "host": {
+            "type": "text",
+            "label": "IP address of the heat pump (Smart-Web)",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "newLine": true
+        },
+        "transport": {
+            "type": "select",
+            "label": "Transport",
+            "xs": 12,
+            "sm": 6,
+            "md": 4,
+            "lg": 3,
+            "xl": 3,
+            "options": [
+                {
+                    "label": "WebSocket (port 9001, like the web UI)",
+                    "value": "ws"
+                },
+                {
+                    "label": "MQTT TCP (port 1883)",
+                    "value": "tcp"
+                }
+            ]
+        },
+        "port": {
+            "type": "number",
+            "label": "Port",
+            "min": 1,
+            "max": 65535,
+            "xs": 12,
+            "sm": 6,
+            "md": 2,
+            "lg": 2,
+            "xl": 2
+        },
+        "password": {
+            "type": "password",
+            "label": "MQTT password (empty = read automatically from the web UI)",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "newLine": true
+        },
+        "topicPrefix": {
+            "type": "text",
+            "label": "Topic prefix (empty = automatic, e.g. V04P28/SMTID)",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4
+        },
+        "_h2": {
+            "type": "header",
+            "text": "Polling",
+            "size": 3,
+            "newLine": true
+        },
+        "keepAlive": {
+            "type": "number",
+            "label": "Fast query every (s)",
+            "min": 10,
+            "max": 600,
+            "xs": 12,
+            "sm": 6,
+            "md": 4,
+            "lg": 3,
+            "xl": 3,
+            "newLine": true
+        },
+        "fullRefresh": {
+            "type": "number",
+            "label": "Refresh all registers every (min)",
+            "min": 1,
+            "max": 1440,
+            "xs": 12,
+            "sm": 6,
+            "md": 4,
+            "lg": 3,
+            "xl": 3
+        },
+        "fastRegisters": {
+            "type": "text",
+            "label": "Additional fast registers (numbers, comma separated)",
+            "xs": 12,
+            "sm": 12,
+            "md": 8,
+            "lg": 6,
+            "xl": 6,
+            "newLine": true
+        },
+        "menuLevel": {
+            "type": "select",
+            "label": "Which data points to create",
+            "xs": 12,
+            "sm": 12,
+            "md": 8,
+            "lg": 6,
+            "xl": 6,
+            "newLine": true,
+            "options": [
+                {
+                    "label": "Like the web UI: user, status, overview (recommended)",
+                    "value": "user"
+                },
+                {
+                    "label": "Additionally service / expert / commissioning",
+                    "value": "service"
+                }
+            ]
+        },
+        "includeMessages": {
+            "type": "checkbox",
+            "label": "Create error/warning message registers",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 6,
+            "xl": 6,
+            "newLine": true
+        },
+        "showAll": {
+            "type": "checkbox",
+            "label": "Create all registers, including hidden ones (diagnostics)",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 6,
+            "xl": 6
+        },
+        "_h3": {
+            "type": "header",
+            "text": "Writing",
+            "size": 3,
+            "newLine": true
+        },
+        "writeMode": {
+            "type": "select",
+            "label": "Writable registers",
+            "xs": 12,
+            "sm": 12,
+            "md": 8,
+            "lg": 6,
+            "xl": 6,
+            "newLine": true,
+            "options": [
+                {
+                    "label": "Off (read only)",
+                    "value": "off"
+                },
+                {
+                    "label": "User menu (recommended)",
+                    "value": "user"
+                },
+                {
+                    "label": "All parameters (expert - caution!)",
+                    "value": "all"
+                }
+            ]
+        }
+    }
+}

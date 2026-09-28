@@ -1,0 +1,71 @@
+{
+  "name": "iobroker.remko",
+  "version": "0.3.0",
+  "description": "Read and control REMKO heat pumps (Smart-Web / Smart-Control) via local MQTT",
+  "author": {
+    "name": "mrdimixx",
+    "email": "stoppeld@gmx.de"
+  },
+  "contributors": [],
+  "homepage": "https://github.com/mrdimixx/ioBroker.remko",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "remko",
+    "heatpump",
+    "waermepumpe",
+    "smart-web",
+    "mqtt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdimixx/ioBroker.remko.git"
+  },
+  "engines": {
+    "node": ">= 22"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.4.3",
+    "mqtt": "^5.16.0"
+  },
+  "devDependencies": {
+    "@alcalzone/release-script": "^5.2.1",
+    "@alcalzone/release-script-plugin-iobroker": "^5.2.0",
+    "@alcalzone/release-script-plugin-license": "^5.2.2",
+    "@alcalzone/release-script-plugin-manual-review": "^5.2.0",
+    "@iobroker/adapter-dev": "^1.5.0",
+    "@iobroker/eslint-config": "^2.3.4",
+    "@iobroker/testing": "^6.2.2",
+    "@iobroker/types": "^7.2.2",
+    "@types/node": "^22.20.2",
+    "aedes": "^0.51.3",
+    "typescript": "~5.9.3",
+    "@tsconfig/node22": "^22.0.6"
+  },
+  "main": "main.js",
+  "files": [
+    "admin{,/!(src)/**}/!(tsconfig|tsconfig.*|.eslintrc).{json,json5}",
+    "admin{,/!(src)/**}/*.{html,css,png,svg,jpg,js}",
+    "lib/",
+    "!lib/**/*.test.js",
+    "tools/",
+    "io-package.json",
+    "LICENSE",
+    "main.js"
+  ],
+  "scripts": {
+    "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
+    "test:package": "mocha test/package --exit",
+    "test:integration": "mocha test/integration --exit",
+    "test:local": "node test/local/protocol.test.js && node test/local/mock-heatpump.test.js && node test/local/adapter-smoke.test.js",
+    "test": "npm run test:js && npm run test:package",
+    "check": "tsc --noEmit -p tsconfig.check.json",
+    "lint": "eslint -c eslint.config.mjs .",
+    "translate": "translate-adapter",
+    "release": "release-script"
+  },
+  "bugs": {
+    "url": "https://github.com/mrdimixx/ioBroker.remko/issues"
+  },
+  "readmeFilename": "README.md"
+}
