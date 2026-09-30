@@ -112,6 +112,12 @@ Protocol knowledge partly based on [Altrec/remko_mqtt-ha](https://github.com/Alt
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### 0.4.0 (2026-09-30)
+- (mrdimixx) object structure fixed (ioBroker object checker): only valid roles (`value`/`level` instead of `value.mode`/`level.mode`), writable power settings use `level`
+- (mrdimixx) actions are write-only buttons (`read: false`); actions that are not allowed are no longer created
+- (mrdimixx) object names in all ioBroker languages (texts from the controller, English as fallback)
+- (mrdimixx) existing objects are replaced on update so outdated attributes disappear (user settings like history are kept)
+
 ### 0.3.3 (2026-09-30)
 - (mrdimixx) registers containing secrets (service/expert passwords, session id, unlock code, SMT-ID) are no longer read or created; existing objects are removed automatically
 

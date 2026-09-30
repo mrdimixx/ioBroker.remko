@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "remko",
-        "version": "0.3.3",
+        "version": "0.4.0",
         "news": {
+            "0.4.0": {
+                "en": "Object structure fixed for the ioBroker object checker: valid roles, write-only buttons, names in all languages",
+                "de": "Objektstruktur für den ioBroker-Objektchecker korrigiert: gültige Rollen, reine Schreib-Buttons, Namen in allen Sprachen",
+                "ru": "Структура объектов исправлена: допустимые роли, кнопки только для записи, названия на всех языках",
+                "pt": "Estrutura de objetos corrigida: funções válidas, botões só de escrita, nomes em todos os idiomas",
+                "nl": "Objectstructuur gecorrigeerd: geldige rollen, alleen-schrijven knoppen, namen in alle talen",
+                "fr": "Structure des objets corrigée : rôles valides, boutons en écriture seule, noms dans toutes les langues",
+                "it": "Struttura degli oggetti corretta: ruoli validi, pulsanti di sola scrittura, nomi in tutte le lingue",
+                "es": "Estructura de objetos corregida: roles válidos, botones de solo escritura, nombres en todos los idiomas",
+                "pl": "Poprawiona struktura obiektów: prawidłowe role, przyciski tylko do zapisu, nazwy we wszystkich językach",
+                "uk": "Структуру об'єктів виправлено: коректні ролі, кнопки лише для запису, назви всіма мовами",
+                "zh-cn": "修正对象结构：有效角色、只写按钮、所有语言的名称"
+            },
             "0.3.3": {
                 "en": "Registers containing secrets (passwords, session id, SMT-ID) are no longer read or created",
                 "de": "Register mit Geheimnissen (Passwörter, Session-ID, SMT-ID) werden nicht mehr gelesen oder angelegt",

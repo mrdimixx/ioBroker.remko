@@ -252,6 +252,21 @@ class Remko extends utils.Adapter {
         }
     }
 
+    /**
+     * Create or replace an object. common is replaced completely (so outdated keys like min/max vanish),
+     * user settings in common.custom and enums are kept.
+     *
+     * @param id object id (without namespace)
+     * @param obj object definition
+     */
+    async writeObject(id, obj) {
+        const old = await this.getObjectAsync(id);
+        if (old && old.common && old.common.custom) {
+            obj.common.custom = old.common.custom;
+        }
+        await this.setObjectAsync(id, obj);
+    }
+
     /** Decide (like the web UI) which registers are shown, create/remove objects accordingly */
     async applyLayout() {
         const c = this.config;
@@ -263,6 +278,9 @@ class Remko extends utils.Adapter {
                 continue;
             }
             const reg = this.db.regs[code];
+            if (reg.typedef === 'action_t' && !this.writable.has(code)) {
+                continue; // actions are write-only buttons - only offer the allowed ones
+            }
             let prefix = '';
             for (const seg of path) {
                 prefix = prefix ? `${prefix}.${seg.id}` : seg.id;
@@ -292,7 +310,7 @@ class Remko extends utils.Adapter {
                     ? this.codeToId.get(obj.native.code) === id
                     : !!(this.knownFolders && this.knownFolders.has(id));
             if (!known) {
-                await this.extendObjectAsync(id, obj);
+                await this.writeObject(id, obj);
             }
         }
         this.knownFolders = new Set([...wanted.keys()].filter(id => wanted.get(id).type !== 'state'));
