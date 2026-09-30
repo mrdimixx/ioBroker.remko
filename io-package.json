@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "remko",
-        "version": "0.3.2",
+        "version": "0.3.3",
         "news": {
+            "0.3.3": {
+                "en": "Registers containing secrets (passwords, session id, SMT-ID) are no longer read or created",
+                "de": "Register mit Geheimnissen (Passwörter, Session-ID, SMT-ID) werden nicht mehr gelesen oder angelegt",
+                "ru": "Регистры с секретами (пароли, ID сессии, SMT-ID) больше не читаются и не создаются",
+                "pt": "Registos com segredos (senhas, ID de sessão, SMT-ID) já não são lidos nem criados",
+                "nl": "Registers met geheimen (wachtwoorden, sessie-ID, SMT-ID) worden niet meer gelezen of aangemaakt",
+                "fr": "Les registres contenant des secrets (mots de passe, ID de session, SMT-ID) ne sont plus lus ni créés",
+                "it": "I registri con segreti (password, ID sessione, SMT-ID) non vengono più letti né creati",
+                "es": "Los registros con secretos (contraseñas, ID de sesión, SMT-ID) ya no se leen ni se crean",
+                "pl": "Rejestry z sekretami (hasła, ID sesji, SMT-ID) nie są już odczytywane ani tworzone",
+                "uk": "Регістри з секретами (паролі, ID сесії, SMT-ID) більше не читаються і не створюються",
+                "zh-cn": "不再读取或创建包含机密信息的寄存器（密码、会话 ID、SMT-ID）"
+            },
             "0.3.2": {
                 "en": "PayPal donation link added",
                 "de": "PayPal-Spendenlink hinzugefügt",

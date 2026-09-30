@@ -112,6 +112,9 @@ Protocol knowledge partly based on [Altrec/remko_mqtt-ha](https://github.com/Alt
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### 0.3.3 (2026-09-30)
+- (mrdimixx) registers containing secrets (service/expert passwords, session id, unlock code, SMT-ID) are no longer read or created; existing objects are removed automatically
+
 ### 0.3.2 (2026-09-28)
 - (mrdimixx) PayPal donation link added (README, GitHub sponsor button, npm funding)
 

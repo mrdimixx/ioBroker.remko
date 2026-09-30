@@ -10,6 +10,8 @@ const FAST_DEFAULT = [
     5132, 5174, 5190, 5205, 5231, 5233, 5320, 5321, 5353, 5359, 5572, 5581, 5625, 5626, 5693, 5911,
 ];
 const MENU_USER = [3, 9]; // "Grundanzeige" + "Benutzer"
+// registers holding secrets (service/expert passwords, session id, unlock code, SMT-ID) are never read or exposed
+const SECRET_TYPES = /^(password_t|eightbytehash_t)$/;
 const NEVER_WRITE = /IP_t|address|password|ssid|mac|eibpaddr|installation|country|language|devid|hash/i;
 const BATCH = 80;
 // actions that are safe to trigger from ioBroker (others like update/restart/reset only in write mode "all")
@@ -104,6 +106,7 @@ class Remko extends utils.Adapter {
         const regs = this.db.regs;
         this.all = Object.keys(regs)
             .map(Number)
+            .filter(n => !SECRET_TYPES.test(regs[n].typedef))
             .filter(n => c.includeMessages || !/^message|lasterror/.test(regs[n].typedef));
         this.allSet = new Set(this.all);
         const extra = String(c.fastRegisters || '')
