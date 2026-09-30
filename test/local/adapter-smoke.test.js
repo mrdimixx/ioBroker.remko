@@ -12,6 +12,8 @@ class FakeAdapter extends EventEmitter {
     setState(id, v, ack) { this.setStateAsync(id, v, ack); }
     async setStateChangedAsync(id, s) { states[id] = s; }
     async extendObjectAsync(id, o) { objects[id] = o; }
+    async getObjectAsync(id) { return objects[id] || null; }
+    async setObjectAsync(id, o) { objects[id] = JSON.parse(JSON.stringify(o)); }
     async setForeignObjectNotExistsAsync(id, o) { if (!objects[id]) objects[id] = o; }
     async writeFileAsync(ns, f, d) { if (!objects[ns] || objects[ns].type !== 'meta') throw new Error(`${ns} is not an object of type "meta"`); files[f] = d; }
     async readFileAsync(ns, f) { return { file: Buffer.from(files[f]) }; }
@@ -57,9 +59,24 @@ main({});
     assert.ok(!Object.keys(objects).some(k => k.endsWith('.5019')), 'solar collector hidden');
     assert.ok(!objects['parameter.1082'], 'old 0.1 object removed');
     assert.ok(objects['uebersicht.5693'], 'action kept');
+    assert.ok(!Object.keys(objects).some(k => /\.(5052|5182|5181|1935|1015)$/.test(k)), 'no secret registers');
     assert.strictEqual(objects['uebersicht.5693'].common.write, true);
     const n = Object.keys(objects).length; console.log('Objekte:', n, 'beschreibbar:', Object.values(objects).filter(o => o.common.write).length);
     assert.ok(n > 300);
+    // official ioBroker object structure check (same as in ioBroker.repositories PRs)
+    let checkObjectStructure = null;
+    try {
+        ({ checkObjectStructure } = require('@iobroker/repochecker/lib/objectStructure'));
+    } catch {
+        console.log('SKIP object structure check (install @iobroker/repochecker globally or set NODE_PATH)');
+    }
+    const dump = { 'remko.0': { _id: 'remko.0', type: 'instance', common: { name: 'remko' }, native: {} } };
+    for (const [k, v] of Object.entries(objects)) dump[`remko.0.${k}`] = { _id: `remko.0.${k}`, ...v };
+    const res = checkObjectStructure ? checkObjectStructure(dump, 'remko') : { errors: [], warnings: [] };
+    const summary = [...res.errors, ...res.warnings].map(e => `${e.code} ${e.message}`);
+    console.log('object check:', res.errors.length, 'errors,', res.warnings.length, 'warnings');
+    summary.slice(0, 15).forEach(l => console.log('  ' + l));
+    assert.strictEqual(res.errors.length + res.warnings.length, 0, 'object structure check');
     assert.ok(files['registerdb.json'], 'cache written');
     assert.ok(!logs.some(l => l.startsWith('E ') && !/rejected/.test(l)), 'no errors');
     a.emit('stateChange', 'remko.0.einstellungen.warmwasser.1082', { val: 48, ack: false });
