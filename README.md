@@ -113,6 +113,9 @@ Protocol knowledge partly based on [Altrec/remko_mqtt-ha](https://github.com/Alt
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### 0.5.1 (2026-10-08)
+- (mrdimixx) read-only values no longer get min/max (fixes warnings like `remko.0.status.5026 has value 1082 greater than max 999`)
+
 ### 0.5.0 (2026-10-08)
 - (mrdimixx) all values are re-published during the full refresh (fresh timestamp), so visualisations started later also get rarely changing settings
 - (mrdimixx) new folder `kaeltekreis` with the refrigerant circuit values of the web UI scheme (hot gas, suction gas, liquid, evaporator temperature, expansion valve, 4-way valve), read in the fast cycle

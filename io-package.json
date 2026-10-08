@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "remko",
-        "version": "0.5.0",
+        "version": "0.5.1",
         "news": {
+            "0.5.1": {
+                "en": "No more \"greater than max\" warnings for read-only values (min/max only for writable settings)",
+                "de": "Keine \"greater than max\"-Warnungen mehr bei reinen Anzeigewerten (min/max nur noch bei schreibbaren Einstellungen)",
+                "ru": "Больше нет предупреждений \"greater than max\" для значений только для чтения (min/max только для изменяемых настроек)",
+                "pt": "Sem avisos \"greater than max\" para valores só de leitura (min/max apenas para configurações graváveis)",
+                "nl": "Geen \"greater than max\"-waarschuwingen meer voor alleen-lezen waarden (min/max alleen bij schrijfbare instellingen)",
+                "fr": "Plus d'avertissements \"greater than max\" pour les valeurs en lecture seule (min/max uniquement pour les réglages modifiables)",
+                "it": "Niente più avvisi \"greater than max\" per i valori di sola lettura (min/max solo per le impostazioni scrivibili)",
+                "es": "Sin avisos \"greater than max\" para valores de solo lectura (min/max solo para ajustes modificables)",
+                "pl": "Brak ostrzeżeń \"greater than max\" dla wartości tylko do odczytu (min/max tylko dla ustawień zapisywalnych)",
+                "uk": "Більше немає попереджень \"greater than max\" для значень лише для читання (min/max лише для змінних налаштувань)",
+                "zh-cn": "只读数值不再出现 \"greater than max\" 警告（最小/最大值仅用于可写设置）"
+            },
             "0.5.0": {
                 "en": "New folder \"kaeltekreis\" with the refrigerant circuit values (hot gas, suction gas, liquid, evaporator, expansion valve, 4-way valve); all values are re-published during the full refresh",
                 "de": "Neuer Ordner \"kaeltekreis\" mit den Kältekreis-Werten (Heißgas, Sauggas, Flüssigkeit, Verdampfer, Expansionsventil, 4-Wege-Ventil); beim Vollabgleich werden alle Werte neu geschrieben",
