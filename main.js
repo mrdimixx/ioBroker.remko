@@ -251,7 +251,13 @@ class Remko extends utils.Adapter {
             }
             const val = P.decode(reg, hex);
             if (val !== null) {
-                await this.setStateChangedAsync(id, { val, ack: true });
+                // during the full refresh every value is re-published (fresh timestamp), so that
+                // visualisations/caches started later also receive rarely changing settings
+                if (this.refreshing) {
+                    await this.setStateAsync(id, { val, ack: true });
+                } else {
+                    await this.setStateChangedAsync(id, { val, ack: true });
+                }
             }
         }
     }
