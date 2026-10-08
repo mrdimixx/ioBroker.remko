@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "remko",
-        "version": "0.4.0",
+        "version": "0.5.0",
         "news": {
+            "0.5.0": {
+                "en": "New folder \"kaeltekreis\" with the refrigerant circuit values (hot gas, suction gas, liquid, evaporator, expansion valve, 4-way valve); all values are re-published during the full refresh",
+                "de": "Neuer Ordner \"kaeltekreis\" mit den Kältekreis-Werten (Heißgas, Sauggas, Flüssigkeit, Verdampfer, Expansionsventil, 4-Wege-Ventil); beim Vollabgleich werden alle Werte neu geschrieben",
+                "ru": "Новая папка \"kaeltekreis\" со значениями холодильного контура (горячий газ, всасываемый газ, жидкость, испаритель, расширительный клапан, 4-ходовой клапан); при полном обновлении все значения записываются заново",
+                "pt": "Nova pasta \"kaeltekreis\" com os valores do circuito de refrigeração (gás quente, gás de sucção, líquido, evaporador, válvula de expansão, válvula de 4 vias); todos os valores são reescritos na atualização completa",
+                "nl": "Nieuwe map \"kaeltekreis\" met de waarden van het koelcircuit (heet gas, zuiggas, vloeistof, verdamper, expansieventiel, 4-wegklep); bij de volledige verversing worden alle waarden opnieuw geschreven",
+                "fr": "Nouveau dossier \"kaeltekreis\" avec les valeurs du circuit frigorifique (gaz chaud, gaz aspiré, liquide, évaporateur, détendeur, vanne 4 voies) ; toutes les valeurs sont réécrites lors de l'actualisation complète",
+                "it": "Nuova cartella \"kaeltekreis\" con i valori del circuito frigorifero (gas caldo, gas aspirato, liquido, evaporatore, valvola di espansione, valvola a 4 vie); durante l'aggiornamento completo tutti i valori vengono riscritti",
+                "es": "Nueva carpeta \"kaeltekreis\" con los valores del circuito frigorífico (gas caliente, gas de aspiración, líquido, evaporador, válvula de expansión, válvula de 4 vías); en la actualización completa se vuelven a escribir todos los valores",
+                "pl": "Nowy folder \"kaeltekreis\" z wartościami obiegu chłodniczego (gorący gaz, gaz ssawny, ciecz, parownik, zawór rozprężny, zawór 4-drogowy); przy pełnym odświeżeniu wszystkie wartości są zapisywane ponownie",
+                "uk": "Нова папка \"kaeltekreis\" зі значеннями холодильного контуру (гарячий газ, всмоктуваний газ, рідина, випарник, розширювальний клапан, 4-ходовий клапан); під час повного оновлення всі значення записуються заново",
+                "zh-cn": "新增文件夹 \"kaeltekreis\"，包含制冷回路数值（热气、吸气、液体、蒸发器、膨胀阀、四通阀）；完整刷新时重新写入所有数值"
+            },
             "0.4.0": {
                 "en": "Object structure fixed for the ioBroker object checker: valid roles, write-only buttons, names in all languages",
                 "de": "Objektstruktur für den ioBroker-Objektchecker korrigiert: gültige Rollen, reine Schreib-Buttons, Namen in allen Sprachen",
