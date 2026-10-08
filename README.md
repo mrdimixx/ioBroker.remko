@@ -58,6 +58,7 @@ The adapter evaluates the **display conditions of the web UI** (e.g. "solar only
 - `remko.0.einstellungen.<area>.<no>` – user → settings (e.g. `einstellungen.warmwasser.1082`)
 - `remko.0.status.<no>` – status page
 - `remko.0.uebersicht…`, `remko.0.homescreen…` – basic display
+- `remko.0.kaeltekreis.<no>` – refrigerant circuit as shown in the "heat pump" scheme of the web UI (hot gas 5146, suction gas 5612, liquid 5139, evaporator/register 5200, expansion valve 5615, 4-way valve 5136); always read in the fast cycle, independent of the menu level
 - optional `service…`, `experte…`, `inbetriebnahme…`
 
 The register number is always the last part of the id. Names, units, min/max and enumerations (`common.states`) come from the heat pump (German texts, as delivered by the controller).
@@ -112,6 +113,9 @@ Protocol knowledge partly based on [Altrec/remko_mqtt-ha](https://github.com/Alt
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (mrdimixx) new folder `kaeltekreis` with the refrigerant circuit values of the web UI scheme (hot gas, suction gas, liquid, evaporator temperature, expansion valve, 4-way valve), read in the fast cycle
+
 ### 0.4.0 (2026-09-30)
 - (mrdimixx) object structure fixed (ioBroker object checker): only valid roles (`value`/`level` instead of `value.mode`/`level.mode`), writable power settings use `level`
 - (mrdimixx) actions are write-only buttons (`read: false`); actions that are not allowed are no longer created

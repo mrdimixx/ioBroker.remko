@@ -9,6 +9,10 @@ const FAST_DEFAULT = [
     1079, 1082, 1088, 1893, 1894, 1936, 1946, 1951, 5001, 5002, 5004, 5005, 5006, 5032, 5034, 5039, 5049, 5105, 5119,
     5132, 5174, 5190, 5205, 5231, 5233, 5320, 5321, 5353, 5359, 5572, 5581, 5625, 5626, 5693, 5911,
 ];
+// Refrigerant circuit values shown in the "heat pump" scheme of the web UI (service menu only).
+// They are always read (fast cycle) and placed in their own folder "kaeltekreis".
+const SCHEME = [5136, 5139, 5146, 5200, 5612, 5615];
+const GROUPS = [{ id: 'kaeltekreis', name: 'Kältekreis', codes: SCHEME }];
 const MENU_USER = [3, 9]; // "Grundanzeige" + "Benutzer"
 // registers holding secrets (service/expert passwords, session id, unlock code, SMT-ID) are never read or exposed
 const SECRET_TYPES = /^(password_t|eightbytehash_t)$/;
@@ -113,7 +117,7 @@ class Remko extends utils.Adapter {
             .split(/[\s,;]+/)
             .map(Number)
             .filter(n => regs[n]);
-        this.fast = [...new Set([...FAST_DEFAULT.filter(n => regs[n]), ...extra])];
+        this.fast = [...new Set([...FAST_DEFAULT, ...SCHEME].filter(n => regs[n] && this.allSet.has(n)).concat(extra))];
         this.userRegs = P.registersBelow(this.db.menus, regs, MENU_USER);
         for (const n of this.all) {
             const r = regs[n];
@@ -271,7 +275,7 @@ class Remko extends utils.Adapter {
     async applyLayout() {
         const c = this.config;
         const tops = c.menuLevel === 'service' ? [9, 405, 3, 10, 11, 4] : [9, 405, 3];
-        const layout = P.layout(this.db, this.raw, { tops, all: !!c.showAll, always: this.fast });
+        const layout = P.layout(this.db, this.raw, { tops, all: !!c.showAll, always: this.fast, groups: GROUPS });
         const wanted = new Map(); // id -> object
         for (const [code, { path }] of layout) {
             if (!this.allSet.has(code)) {
